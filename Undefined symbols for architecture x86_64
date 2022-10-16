@@ -1,0 +1,24 @@
+Mac C++ viscose
+
+Undefined symbols for architecture x86_64:
+  "min(int, int)", referenced from:
+      _main in demo001-d523b6.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+find->Settings->runner
+
+Code-runner: Executor Map
+Set the executor of each language.
+
+Edit in settings.json
+"cpp": "cd $dir && g++ $fileName
+ -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+
+Change $fileName to *.cpp
+
+
+"cpp": "cd $dir && g++ *.cpp -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+
+save the file and run again
